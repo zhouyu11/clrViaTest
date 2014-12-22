@@ -293,6 +293,8 @@ namespace BanKai.Basic
             const double expectedResult = Double.NaN;
 
             Assert.Equal(expectedResult, (numerator / denominator));
+           // Console.WriteLine(double.NaN!=double.NaN);
+            //??? return true???
         }
     }
 
