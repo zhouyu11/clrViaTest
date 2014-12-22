@@ -14,7 +14,7 @@ namespace BanKai.Basic
         public void should_get_minimum_value_of_a_number_type()
         {
             // change "default(sbyte)" to correct value. You should not explicitly write -128.
-            sbyte minimum = default(sbyte);
+            sbyte minimum = sbyte.MinValue;
 
             Assert.Equal(-128, minimum);
         }
