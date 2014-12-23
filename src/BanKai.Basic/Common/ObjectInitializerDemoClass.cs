@@ -1,4 +1,6 @@
-﻿namespace BanKai.Basic.Common
+﻿using System;
+
+namespace BanKai.Basic.Common
 {
     public class ObjectInitializerDemoClass
     {
