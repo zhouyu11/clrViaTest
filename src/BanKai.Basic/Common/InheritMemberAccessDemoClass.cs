@@ -19,5 +19,10 @@
         {
             return "The value is " + ProtectedProperty;
         }
+
+        public void SubMethod()
+        {
+            
+        }
     }
 }
