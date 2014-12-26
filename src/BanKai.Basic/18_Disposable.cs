@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using BanKai.Basic.Common;
 using Xunit;
 
@@ -25,7 +26,7 @@ namespace BanKai.Basic
             }
 
             // change variable value to fix test.
-            const string expectedTracingMessage = "";
+            string expectedTracingMessage = "constructor called." + Environment.NewLine + "dispose called."+Environment.NewLine;
 
             Assert.Equal(expectedTracingMessage, tracer.ToString());
         }
@@ -33,6 +34,7 @@ namespace BanKai.Basic
         [Fact]
         public void should_use_using_statement_for_simplicity()
         {
+            
             var tracer = new StringBuilder();
 
             using (var demoDisposable = new DisposableWithTracingDemoClass(tracer))
@@ -41,7 +43,7 @@ namespace BanKai.Basic
             }
 
             // change the variable value to fix the test.
-            const string expectedTracingMessage = "";
+            string expectedTracingMessage = "constructor called." + Environment.NewLine + "dispose called."+Environment.NewLine;
 
             Assert.Equal(expectedTracingMessage, tracer.ToString());
         }
